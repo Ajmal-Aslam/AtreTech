@@ -1,0 +1,1131 @@
+{
+	"info": {
+		"_postman_id": "227d43ec-b829-4fb9-aa57-34fd68110882",
+		"name": "AtreProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30811785"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"DevinConway\",\r\n    \"password\": \"DevinConway123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"DevinConway\",\r\n    \"password\": \"DevinConway123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-zkTN19HSrn3jwuOyKup9zA0yzXo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 04:02:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "created Successfully"
+						}
+					]
+				},
+				{
+					"name": "AllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "496"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f0-xPRNdQAh1HztDSm4Gs7mju9XZfU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 04:06:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"653dd86d7c672b6c39575cc7\",\n        \"username\": \"Alphones\",\n        \"password\": \"U2FsdGVkX1+zqRGUIIE8BriAdoq+rZXQZusZiZjQUd4=\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653dd90e060f995809fe0a9a\",\n        \"username\": \"Benstokes\",\n        \"password\": \"U2FsdGVkX1/UZJyhZc+VRYvSwNOvrhOXHQEvDGVVoHc=\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653dd950060f995809fe0a9c\",\n        \"username\": \"Charles\",\n        \"password\": \"U2FsdGVkX1/JzdI7xnRw4MPAaFazuIGDuw7Xl9ZUBS8=\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653dd96a060f995809fe0a9e\",\n        \"username\": \"DevinConway\",\n        \"password\": \"U2FsdGVkX18LbipS4gtVLqvYwvtZ9D62P8TdgJCYpZM=\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "OneUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/653dd86d7c672b6c39575cc7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"653dd86d7c672b6c39575cc7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "122"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7a-O8IaTfnqWn5ZezQutPGeW3VJSKE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 08:16:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"653dd86d7c672b6c39575cc7\",\n    \"username\": \"Alphones\",\n    \"password\": \"U2FsdGVkX1+zqRGUIIE8BriAdoq+rZXQZusZiZjQUd4=\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/653dd950060f995809fe0a9c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"653dd950060f995809fe0a9c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-naXEYdtG4TCZ4ute20OuRhFSmQk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 08:18:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "sucessfulley deleted"
+						}
+					]
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Alphones James\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/653dd86d7c672b6c39575cc7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"653dd86d7c672b6c39575cc7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 08:20:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"modifiedCount\": 1,\n    \"upsertedId\": null,\n    \"upsertedCount\": 0,\n    \"matchedCount\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "LoginUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Failure",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"DevinConway\",\r\n    \"password\":\"Alphones123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "13"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d-S0HS8XQC5sXtN551JMZa9DfxxgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 08:24:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Login Failure"
+						},
+						{
+							"name": "Sucess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"DevinConway\",\r\n    \"password\":\"DevinConway123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bc-HGcCTarhE7Xe2NzP9ICNXAaFlwA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 08:25:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"result\": {\n        \"UserDetails\": [\n            {\n                \"_id\": \"653dd96a060f995809fe0a9e\",\n                \"username\": \"DevinConway\",\n                \"password\": \"U2FsdGVkX18LbipS4gtVLqvYwvtZ9D62P8TdgJCYpZM=\",\n                \"__v\": 0\n            }\n        ],\n        \"token\": \"eyJhbGciOiJIUzI1NiJ9.W3siX2lkIjoiNjUzZGQ5NmEwNjBmOTk1ODA5ZmUwYTllIiwidXNlcm5hbWUiOiJEZXZpbkNvbndheSIsInBhc3N3b3JkIjoiVTJGc2RHVmtYMThMYmlwUzRndFZMcXZZd3Z0WjlENjJQOFRkZ0pDWXBaTT0iLCJfX3YiOjB9XQ.RxqG8n3Vsi4zbV8C3aQILdgm4_NK2axXYiWQXtktkLs\"\n    },\n    \"message\": \"Login Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"AlphonesJames123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/653dd86d7c672b6c39575cc7/reset-password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"653dd86d7c672b6c39575cc7",
+										"reset-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-p01fvUdrPf6tUI+nM/WdBk5j2ps\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 08:28:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "Your password has been reset"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Appoinment",
+			"item": [
+				{
+					"name": "CreateAppoinment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\":[\"653e275489e4f8b7d9c29b53\"],\r\n     \"date\": \"2023-10-05T09:00:00.000Z\", \r\n  \"purpose\": \"Training Session\",\r\n  \"location\": \"Training Room 2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/appoinment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"appoinment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-eU0quLWbxkUmWZD3tJkuqpnNTu8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 09:38:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "created sucessfulley"
+						}
+					]
+				},
+				{
+					"name": "AllAppoinments",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/appoinment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"appoinment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "805"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"325-37F9CIEFTcc9F4MdVi61OkyV1t4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 09:40:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"653e213d4733e5a92382069e\",\n        \"user\": {\n            \"_id\": \"653dd96a060f995809fe0a9e\",\n            \"username\": \"DevinConway\",\n            \"password\": \"U2FsdGVkX18LbipS4gtVLqvYwvtZ9D62P8TdgJCYpZM=\",\n            \"__v\": 0\n        },\n        \"date\": \"2023-11-15T14:30:00.000Z\",\n        \"purpose\": \"Meeting with Client\",\n        \"location\": \"123 Main St, Suite 456\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653e2274bd7c69600eb567c4\",\n        \"user\": {\n            \"_id\": \"653dd90e060f995809fe0a9a\",\n            \"username\": \"Benstokes\",\n            \"password\": \"U2FsdGVkX1/UZJyhZc+VRYvSwNOvrhOXHQEvDGVVoHc=\",\n            \"__v\": 0\n        },\n        \"date\": \"2023-12-20T15:45:00.000Z\",\n        \"purpose\": \"Team Meeting\",\n        \"location\": \"Conference Room B\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653e27f989e4f8b7d9c29b56\",\n        \"user\": {\n            \"_id\": \"653e275489e4f8b7d9c29b53\",\n            \"username\": \"Eliza\",\n            \"password\": \"U2FsdGVkX1/9XG83dgAaiyBH0YMeZ672U5x6oUsreu0=\",\n            \"__v\": 0\n        },\n        \"date\": \"2023-10-05T09:00:00.000Z\",\n        \"purpose\": \"Training Session\",\n        \"location\": \"Training Room 2\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "AppoinmentId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/appoinment/653e213d4733e5a92382069e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"appoinment",
+										"653e213d4733e5a92382069e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "178"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b2-IJrNwaKI7BFRlwUi5eC+TR0JUTc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 09:53:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"653e213d4733e5a92382069e\",\n    \"user\": \"653dd96a060f995809fe0a9e\",\n    \"date\": \"2023-11-15T14:30:00.000Z\",\n    \"purpose\": \"Meeting with Client\",\n    \"location\": \"123 Main St, Suite 456\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdatedAppoinment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"location\":\"Scholl of Excellence,Br\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/appoinment/653e27f989e4f8b7d9c29b56",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"appoinment",
+										"653e27f989e4f8b7d9c29b56"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-XE4LqSKK8lMBgnDPfq7vp2yCSG8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 09:59:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acknowledged\": true,\n    \"modifiedCount\": 1,\n    \"upsertedId\": null,\n    \"upsertedCount\": 0,\n    \"matchedCount\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Timeslot",
+			"item": [
+				{
+					"name": "CreateSlot",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date\": \"2023-11-15\",\r\n    \"startTime\": \"09:00 AM\",\r\n    \"endTime\": \"10:00 AM\",\r\n    \"appointment\":[\"653e213d4733e5a92382069e\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/Timeslot",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"Timeslot"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-eU0quLWbxkUmWZD3tJkuqpnNTu8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 11:51:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "created sucessfulley"
+						}
+					]
+				},
+				{
+					"name": "SlotList",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/Timeslot",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"Timeslot"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1010"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f2-e5UV6fJ30rpvOE3y6wn3Ep8k/wM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 11:56:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"653e472e251a6a610cff5817\",\n        \"date\": \"2023-11-15T00:00:00.000Z\",\n        \"startTime\": \"09:00 AM\",\n        \"endTime\": \"10:00 AM\",\n        \"bookedStatus\": \"Available\",\n        \"appointment\": {\n            \"_id\": \"653e213d4733e5a92382069e\",\n            \"user\": \"653dd96a060f995809fe0a9e\",\n            \"date\": \"2023-11-15T14:30:00.000Z\",\n            \"purpose\": \"Meeting with Client\",\n            \"location\": \"123 Main St, Suite 456\",\n            \"__v\": 0\n        },\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653e47ac251a6a610cff5819\",\n        \"date\": \"2023-12-20T00:00:00.000Z\",\n        \"startTime\": \"12:00 PM\",\n        \"endTime\": \"02:00 PM\",\n        \"bookedStatus\": \"Available\",\n        \"appointment\": {\n            \"_id\": \"653e2274bd7c69600eb567c4\",\n            \"user\": \"653dd90e060f995809fe0a9a\",\n            \"date\": \"2023-12-20T15:45:00.000Z\",\n            \"purpose\": \"Team Meeting\",\n            \"location\": \"Conference Room B\",\n            \"__v\": 0\n        },\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"653e4823251a6a610cff581b\",\n        \"date\": \"2023-10-05T00:00:00.000Z\",\n        \"startTime\": \"08:00 AM\",\n        \"endTime\": \"04:00 PM\",\n        \"bookedStatus\": \"Available\",\n        \"appointment\": {\n            \"_id\": \"653e27f989e4f8b7d9c29b56\",\n            \"user\": \"653e275489e4f8b7d9c29b53\",\n            \"date\": \"2023-10-05T09:00:00.000Z\",\n            \"purpose\": \"Training Session\",\n            \"location\": \"Scholl of Excellence,Br\",\n            \"__v\": 0\n        },\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "ParticularSlot",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/Timeslot/653e472e251a6a610cff5817",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"Timeslot",
+										"653e472e251a6a610cff5817"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "188"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bc-G/7kt/URiUFJe6G52BzS31Wo2dY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 11:57:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"653e472e251a6a610cff5817\",\n    \"date\": \"2023-11-15T00:00:00.000Z\",\n    \"startTime\": \"09:00 AM\",\n    \"endTime\": \"10:00 AM\",\n    \"bookedStatus\": \"Available\",\n    \"appointment\": \"653e213d4733e5a92382069e\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateSlot",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"endTime\":\"10:40 AM\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/Timeslot/653e4823251a6a610cff581b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"Timeslot",
+										"653e4823251a6a610cff581b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17-n3JhmMag+0os+gycbXBSiDZJqBY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Oct 2023 12:25:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "This slot is now Booked"
+						}
+					]
+				}
+			]
+		}
+	]
+}
